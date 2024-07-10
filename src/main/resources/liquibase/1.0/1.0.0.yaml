@@ -1,0 +1,52 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_doctors_table
+      author: Aytac Ramazanli
+      changes:
+        - createTable:
+            tableName: doctors
+            schemaName: app
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: VARCHAR(35)
+              - column:
+                  name: image_data
+                  type: BIGINT
+              - column:
+                  name: address
+                  type: VARCHAR(255)
+              - column:
+                  name: email
+                  type: VARCHAR(64)
+              - column:
+                  name: surname
+                  type: VARCHAR(255)
+              - column:
+                  name: phone_number
+                  type: VARCHAR(64)
+              - column:
+                   name: specialization
+                   type: VARCHAR(128)
+              - column:
+                  name: dob
+                  type: DATE
+              - column:
+                  name: created_at
+                  type: DATE
+                  defaultValueComputed: CURRENT_TIMESTAMP
+              - column:
+                  name: updated_at
+                  type: DATE
+                  defaultValueComputed: CURRENT_TIMESTAMP
+
+
+
+
+
