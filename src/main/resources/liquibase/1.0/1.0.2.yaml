@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_doctors_patients_table
+      author: Aytac Ramazanli
+      changes:
+        - createTable:
+            tableName: doctors_patients
+            schemaName: app
+            columns:
+              - column:
+                  name: doctor_id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+                    foreignKey:
+                      constraintName: FK_doctors_patients
+                      referencedColumnNames: id
+                      referencedTableName: doctors
+              - column:
+                  name: patients_id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+                    foreignKey:
+                      constraintName: FK_doctors_patients
+                      referencedColumnNames: id
+                      referencedTableName: patients
