@@ -1,0 +1,78 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=app
+    username: postgres
+    password: root
+
+  jpa:
+    database: postgresql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+  mail:
+    properties:
+      mail:
+        smtp:
+          ssl:
+            trust: "*"
+          auth: true
+          starttls:
+            enable: true
+
+    host: smtp.gmail.com
+    username: aytacr67@gmail.com
+    password: wjzpgjcwmzfcmqqi
+    default-encoding: UTF-8
+    protocol: smtp
+    port: 587
+  liquibase:
+    change-log: classpath:liquibase/change-log-master.yaml
+    default-schema: app
+
+
+
+
+
+
+
+
+
+
+
+
+
+#server:
+#  port: 8081
+#spring:
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=app
+#    username: postgres
+#    password: root
+#
+#  jpa:
+#    database: postgresql
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: none
+#  mail:
+#    properties:
+#      mail:
+#        smtp:
+#          ssl:
+#            trust:"*"
+#          auth: true
+#          starttls:
+#            enable:true
+#
+#    host: smtp.gmail.com
+#    username: cavidabdullayevv20@gmail.com
+#    password: oazhtujbrdkafslv
+#    default-encoding: UTF-8
+#    protocol: smtp
+#    port:
+#  liquibase:
+#    change-log: liquibase/change-log-master.yaml
